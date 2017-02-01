@@ -1,0 +1,123 @@
+<h3>
+  Accordion Components
+</h3>
+<p><b>NgBootstrap</b></p>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-4">
+
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+
+        <ngb-panel id="1">
+          <template ngbPanelTitle >
+            <span>Legislation</span>
+          </template>
+          <template ngbPanelContent>
+            Content for First template.
+          </template>
+        </ngb-panel>
+
+        <ngb-panel>
+          <template ngbPanelTitle>
+            <span>Year</span>
+          </template>
+          <template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod ad squid.
+            aute, non cupidatat skateboard dolor brunch.
+          </template>
+
+        </ngb-panel>
+
+        <ngb-panel title="More Content">
+          <template ngbPanelContent>
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+              <li>Four</li>
+            </ul>
+          </template>
+        </ngb-panel>
+      </ngb-accordion>
+
+      <br/>
+      <p><b>ng2-bootstrap</b></p>
+      <accordion>
+
+        <accordion-group heading="Legislation">
+          Legislation
+        </accordion-group>
+
+        <div class="facetSpacePadding"></div>
+
+        <accordion-group #group>
+          <div accordion-heading>
+            Markup Icon
+            <i class="pull-right float-xs-right chevronPadding fa"
+               [ngClass]="{'fa-chevron-down': group?.isOpen, 'fa-chevron-right': !group?.isOpen}"></i>
+          </div>
+          This is just some content to illustrate fancy headings.
+        </accordion-group>
+
+        <div class="facetSpacePadding"></div>
+
+        <accordion-group #researchgroup>
+          <div accordion-heading>
+            Research
+            <i class="pull-right float-xs-right chevronPadding fa"
+               [ngClass]="{'fa-chevron-down': researchgroup?.isOpen, 'fa-chevron-right': !researchgroup?.isOpen}"></i>
+          </div>
+          Research content goes here...
+        </accordion-group>
+
+        <div class="facetSpacePadding"></div>
+
+        <accordion-group #literature>
+          <div accordion-heading>
+            Literature
+            <i class="pull-right float-xs-right chevronPadding fa"
+               [ngClass]="{'fa-chevron-down': literature?.isOpen, 'fa-chevron-right': !literature?.isOpen}"></i>
+          </div>
+          Literature content goes here...
+        </accordion-group>
+
+        <div class="facetSpacePadding"></div>
+
+        <accordion-group heading="Content 2">
+          <p>Content 2</p>
+        </accordion-group>
+
+      </accordion>
+
+    </div><!-- col md 4 -->
+
+    <div class="col-sm-8">
+      Right hand column using "div class="col-sm-8" as the layout.
+
+     <p>This is a demo of the  <a href="https://ng-bootstrap.github.io/#/components/accordion">
+       Accordion component</a> of ng-bootstrap.</p><hr/>
+      <p>The second example uses ng2-bootstrap along with Font Awesome for the up and down arrows displayed
+        when an accordion is open or closed. A test that FontAweseome is working is displayed here:
+       <i class="fa fa-camera-retro"></i> fa-camera-retro.  </p>
+      <p>You need to make sure the styles[] array in angular-cli.json looks like this: </p>
+      <pre> "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "./assets/font-awesome-4.7.0/css/font-awesome.min.css",
+        "styles.css"
+      ]</pre>
+
+
+
+
+    </div><!-- col md 8 -->
+
+  </div><!-- row -->
+
+  <br/>
+
+</div><!-- container -->
+
+<br/>
+

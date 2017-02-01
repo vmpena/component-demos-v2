@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+/* styles for ng2-bootstrap accordion */
+
+.card-header {
+  background-color: #f7f7f9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 0;
+  padding: 0.5rem 1rem 0rem 2rem;
+}
+
+.facetSpacePadding{
+  padding: 4px;
+}
+
+.chevronPadding{
+  padding: 6px;
+}
+
+/* style needed for ng2-pagination */
+.pointer{
+  cursor: pointer;
+}
