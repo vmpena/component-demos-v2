@@ -1,3 +1,71 @@
-<p>
-  pagination works!
-</p>
+<div class="container">
+
+  <div class="row">
+    <p>Components Used: </p>
+    <ul>
+      <li>Pagination: <a href="http://michaelbromley.github.io/ng2-pagination/#/"> ng-2 pagination</a></li>
+      <li>Drop down: <a href="http://valor-software.com/ng2-bootstrap/#/dropdowns">ng2 bootstrap</a> </li>
+    </ul>
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+
+      <div ngbDropdown class="d-inline-block" #myDrop="ngbDropdown">
+
+        <button class="btn btn-outline-primary"
+                id="dropdownMenu1"
+                ngbDropdownToggle >
+
+        {{message}}
+
+        </button>
+
+        <div class="dropdown-menu" id="options" aria-labelledby="dropdownMenu1">
+
+          <div *ngFor="let option of sortOptions">
+            <button class="dropdown-item" id="option" (blur)="changeMessage(option)">{{option}}</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Header -->
+  <div class="row">
+    <div class="col-md-3">
+      <b>Name</b>
+    </div>
+    <div class="col-md-4">
+      <b>Email</b>
+    </div>
+    <div class="col-md-3">
+      <b>Balance</b>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div *ngFor="let customer of customers | paginate: { itemsPerPage: 10, currentPage: page }">
+    <div class="row">
+      <div class="col-md-3">
+        {{ customer.name.first}} {{ customer.name.last}}
+      </div>
+      <div class="col-md-4">
+        {{customer.email}}
+      </div>
+      <div class="col-md-3">
+        {{customer.balance}}
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <div class="has-text-centered">
+    <pagination-controls (pageChange)= "page = $event" class="pointer"></pagination-controls>
+  </div>
+
+</div> <!-- /container -->

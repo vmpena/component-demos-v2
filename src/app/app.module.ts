@@ -14,8 +14,11 @@ import {CustomerService} from "./services/customer.service";
 import { Routing } from './app.routing';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AccordionModule } from 'ng2-bootstrap/accordion';
 import { PaginationModule } from 'ng2-bootstrap/pagination';
+import { DropdownModule } from 'ng2-bootstrap';
+
 import { Ng2PaginationModule } from 'ng2-pagination'
 
 
@@ -36,6 +39,7 @@ import { Ng2PaginationModule } from 'ng2-pagination'
     NgbModule.forRoot(),
     AccordionModule.forRoot(),
     PaginationModule.forRoot(),
+    DropdownModule.forRoot(),
     Ng2PaginationModule
   ],
   providers: [
