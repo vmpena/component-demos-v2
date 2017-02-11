@@ -25,7 +25,8 @@
         <div class="dropdown-menu" id="options" aria-labelledby="dropdownMenu1">
 
           <div *ngFor="let option of sortOptions">
-            <button class="dropdown-item" id="option" (blur)="changeMessage(option)">{{option}}</button>
+            <button class="dropdown-item" id="option"
+                    (click)="changeMessage(option)">{{option}}</button>
           </div>
         </div>
 
